@@ -1,177 +1,51 @@
-# React Native Todo App
+# Todo App
 
-A beautiful, feature-rich Todo application built with React Native, TypeScript, and Expo. The app includes persistent storage, smooth animations, and a clean iOS-style design.
+I built this todo app because I wanted to practice React Native and TypeScript. It's a simple but polished app that lets you manage your daily tasks.
 
-## 📱 Features
+## What it does
 
-- ✅ **Add Todos**: Create new todo items with validation
-- 🔄 **Toggle Complete**: Mark todos as completed or active
-- 🗑️ **Delete Todos**: Remove individual todos with confirmation
-- 📱 **Filter Tabs**: View All, Active, or Completed todos
-- 💾 **Persistent Storage**: Todos are saved locally using AsyncStorage
-- 🎨 **Beautiful UI**: iOS-style design with smooth animations
-- 📊 **Statistics**: See counts for each category
-- 🧹 **Clear Completed**: Remove all completed todos at once
-- 🔄 **Loading States**: Proper loading indicators
-- 📱 **Responsive**: Works perfectly on different screen sizes
+- Add new todos
+- Mark them as complete or incomplete
+- Delete todos you don't need anymore
+- Filter between all, active, and completed tasks
+- Everything saves automatically so your todos persist when you close the app
+- Dark mode design that's easy on the eyes
 
-## 🛠️ Technology Stack
+## Tech stuff
 
-- **React Native** with **Expo**
-- **TypeScript** for type safety
-- **AsyncStorage** for persistent local storage
-- **React Hooks** for state management
-- **Animated API** for smooth animations
-- **FlatList** for optimized rendering
+Built with React Native, TypeScript, and Expo. Uses AsyncStorage to save your todos locally on your device - no internet required. I focused on making the animations smooth and the interface feel responsive.
 
-## 📁 Project Structure
+## How to run it
 
-```
-TodoApp/
-├── components/
-│   ├── AddTodo.tsx       # Input component for adding new todos
-│   ├── FilterTabs.tsx    # Filter tabs for All/Active/Completed
-│   └── TodoItem.tsx      # Individual todo item component
-├── types/
-│   └── Todo.ts           # TypeScript interfaces and types
-├── utils/
-│   └── TodoStorage.ts    # AsyncStorage utility functions
-├── App.tsx               # Main app component
-└── README.md
+You'll need Node.js and Expo CLI installed. Then:
+
+```bash
+git clone https://github.com/sarmadmakhdoom/react-native-todo-app.git
+cd react-native-todo-app
+npm install
+npx expo start
 ```
 
-## 🚀 Getting Started
+Scan the QR code with Expo Go on your phone, or press 'i' to run it in the iOS simulator.
 
-### Prerequisites
+## Code structure
 
-- Node.js (v16 or later)
-- npm or yarn
-- Expo CLI
-- iOS Simulator (for iOS) or Android Emulator (for Android)
+Pretty straightforward:
+- `App.tsx` - main app logic
+- `components/` - individual UI pieces (todo items, input field, filter tabs)
+- `utils/TodoStorage.ts` - handles saving/loading todos
+- `types/Todo.ts` - TypeScript definitions
 
-### Installation
+## Things I learned
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/sarmadmakhdoom/react-native-todo-app.git
-   cd react-native-todo-app
-   ```
+This was my first time really diving into React Native animations. The `Animated` API is pretty powerful once you get the hang of it. Also learned a lot about AsyncStorage and how to properly serialize/deserialize data.
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+The hardest part was getting the smooth animations right - especially the scale effects when you tap items. Spent way too much time tweaking timing values.
 
-3. **Start the development server**
-   ```bash
-   npx expo start
-   ```
+## What's next
 
-4. **Run on your preferred platform**
-   - Press `i` for iOS Simulator
-   - Press `a` for Android Emulator
-   - Scan QR code with Expo Go app on your device
-
-## 📱 Screenshots
-
-### Main Interface
-- Clean, modern design with intuitive navigation
-- Add todos with the floating input field
-- Filter between All, Active, and Completed todos
-
-### Features in Action
-- Smooth animations when checking off todos
-- Persistent storage - your todos remain after closing the app
-- Smart empty states for better user experience
-
-## 🔧 Key Components
-
-### `App.tsx`
-The main component that manages the overall state and renders all child components.
-
-### `TodoItem.tsx`
-Individual todo item with:
-- Checkbox animation
-- Strike-through text for completed items
-- Delete button with confirmation
-- Smooth press animations
-
-### `AddTodo.tsx`
-Input component featuring:
-- Real-time validation
-- Character count (max 100)
-- Smooth button animations
-- Auto-focus and keyboard handling
-
-### `FilterTabs.tsx`
-Tab component with:
-- Active state highlighting
-- Badge counts for each category
-- Smooth transitions
-
-### `TodoStorage.ts`
-Utility class for:
-- Saving todos to AsyncStorage
-- Loading todos on app start
-- Proper error handling
-- Date serialization/deserialization
-
-## 🎨 Design Highlights
-
-- **iOS-inspired Design**: Clean, modern interface following iOS design principles
-- **Smooth Animations**: All interactions include subtle animations for better UX
-- **Consistent Spacing**: Proper spacing and typography throughout
-- **Color Scheme**: Carefully chosen colors for accessibility and visual appeal
-- **Shadow and Depth**: Subtle shadows and depth cues for better visual hierarchy
-
-## 📊 State Management
-
-The app uses React hooks for state management:
-- `useState` for local component state
-- `useEffect` for side effects (loading/saving data)
-- Proper separation of concerns between components
-
-## 💾 Data Persistence
-
-- Uses `@react-native-async-storage/async-storage` for local storage
-- Automatic saving whenever todos change
-- Proper error handling for storage operations
-- Date objects are properly serialized/deserialized
-
-## 🔮 Future Enhancements
-
-- [ ] Due dates and reminders
-- [ ] Categories and tags
-- [ ] Search functionality
-- [ ] Export/import todos
-- [ ] Dark mode support
-- [ ] Drag and drop reordering
-- [ ] Sync with cloud storage
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-**Sarmad Makhdoom**
-- GitHub: [@sarmadmakhdoom](https://github.com/sarmadmakhdoom)
-- LinkedIn: [Adil Makhdoom](https://www.linkedin.com/in/adilmakhdoom)
-
-## 🙏 Acknowledgments
-
-- React Native team for the excellent framework
-- Expo team for simplifying development
-- The open-source community for inspiration and tools
+Might add due dates, categories, or sync with iCloud. We'll see if I have time.
 
 ---
 
-Made with ❤️ by [Sarmad Makhdoom](https://github.com/sarmadmakhdoom)
+By [Sarmad Makhdoom](https://github.com/sarmadmakhdoom)
