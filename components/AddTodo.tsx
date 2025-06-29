@@ -53,7 +53,7 @@ export const AddTodo: React.FC<AddTodoProps> = ({ onAdd }) => {
         <TextInput
           style={styles.input}
           placeholder="Add a new todo..."
-          placeholderTextColor="#8e8e93"
+          placeholderTextColor="#8E8E93"
           value={text}
           onChangeText={setText}
           onFocus={() => setIsFocused(true)}
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#1C1C1E',
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 4,
@@ -99,20 +99,20 @@ const styles = StyleSheet.create({
       width: 0,
       height: 2,
     },
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.3,
     shadowRadius: 3.84,
     elevation: 5,
     borderWidth: 2,
-    borderColor: 'transparent',
+    borderColor: '#2C2C2E',
   },
   inputFocused: {
-    borderColor: '#007AFF',
-    shadowOpacity: 0.2,
+    borderColor: '#0A84FF',
+    shadowOpacity: 0.4,
   },
   input: {
     flex: 1,
     fontSize: 16,
-    color: '#1a1a1a',
+    color: '#FFFFFF',
     paddingVertical: 12,
     paddingRight: 12,
   },
@@ -120,12 +120,12 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: '#007AFF',
+    backgroundColor: '#0A84FF',
     alignItems: 'center',
     justifyContent: 'center',
   },
   addButtonDisabled: {
-    backgroundColor: '#c7c7cc',
+    backgroundColor: '#48484A',
   },
   addButtonText: {
     color: 'white',
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
   },
   characterCount: {
     fontSize: 12,
-    color: '#8e8e93',
+    color: '#8E8E93',
     textAlign: 'right',
     marginTop: 4,
     marginRight: 4,

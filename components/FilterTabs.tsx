@@ -101,10 +101,11 @@ export const FilterTabs: React.FC<FilterTabsProps> = ({
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: '#f2f2f7',
+    backgroundColor: '#1C1C1E',
     borderRadius: 12,
     padding: 4,
     marginBottom: 20,
+    marginHorizontal: 20,
   },
   tab: {
     flex: 1,
@@ -117,8 +118,8 @@ const styles = StyleSheet.create({
     minHeight: 44,
   },
   activeTab: {
-    backgroundColor: '#007AFF',
-    shadowColor: '#007AFF',
+    backgroundColor: '#0A84FF',
+    shadowColor: '#0A84FF',
     shadowOffset: {
       width: 0,
       height: 2,
@@ -130,13 +131,13 @@ const styles = StyleSheet.create({
   tabText: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#8e8e93',
+    color: '#8E8E93',
   },
   activeTabText: {
     color: 'white',
   },
   badge: {
-    backgroundColor: '#8e8e93',
+    backgroundColor: '#48484A',
     borderRadius: 10,
     minWidth: 20,
     height: 20,
@@ -148,7 +149,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255, 255, 255, 0.3)',
   },
   badgeText: {
-    color: 'white',
+    color: '#FFFFFF',
     fontSize: 12,
     fontWeight: 'bold',
   },
